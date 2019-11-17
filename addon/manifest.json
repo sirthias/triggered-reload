@@ -1,0 +1,30 @@
+{
+  "description": "Reloads tabs when a message is sent to TCP port 43434 holding a prefix of the tabs current URI",
+  "manifest_version": 2,
+  "name": "triggered-reload",
+  "version": "1.0",
+  "homepage_url": "https://github.com/sirthias/triggered-reload",
+
+  "applications": {
+    "gecko": {
+      "id": "triggered@reload",
+      "strict_min_version": "59.0"
+    }
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "page_action": {
+    "default_icon": "icons/off.svg",
+    "browser_style": true,
+    "show_matches": ["<all_urls>"]
+  },
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "nativeMessaging"
+  ]
+}

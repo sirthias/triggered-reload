@@ -1,0 +1,7 @@
+{
+  "name": "triggered.reload",
+  "description": "Simple proxy from TCP port 43434 to the 'triggered-reload' browser extension",
+  "path": "<path-to-triggered-reload>/native/start_nc.sh",
+  "type": "stdio",
+  "allowed_extensions": [ "triggered@reload" ]
+}

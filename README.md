@@ -83,5 +83,11 @@ This JSON string (which is just a string of UTF-8 encoded characters surrounded
 by double quotes) holds a URI "match pattern" as documented on this page:
 https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns
 
-The simplest match pattern is `"<all_urls>"`, which will simply trigger a reload
-of all tabs that currently have reloading enabled.
+The simplest match pattern is `"<all_urls>"`, which will simply trigger a
+reload of all tabs that currently have reloading enabled. Together with the 4
+bytes length prefix this amounts to the following 16 bytes (in hex) for the
+general "reload everything" message on little-endian machines:
+
+```
+0c 00 00 00 22 3c 61 6c 6c 5f 75 72 6c 73 3e 22
+```

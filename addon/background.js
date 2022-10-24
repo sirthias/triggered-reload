@@ -10,11 +10,11 @@ const TITLE_ENABLE = "Enable triggered-reload";
 const TITLE_DISABLE = "Disable triggered-reload";
 
 const ports = new Map();
+let port;
 
 function enableTriggeredReload(tabId) {
   console.log(`Enabling triggered-reload on tab ${tabId}...`);
-  var port;
-  if (ports.size === 0) {    
+  if (ports.size === 0) {
     port = browser.runtime.connectNative("triggered.reload");
     port.onMessage.addListener(msg => {
       console.log(`Received reload trigger for ${msg}`);
@@ -56,5 +56,7 @@ function toggle(tab) {
     }
   }
 }
+
+console.log("Loading triggered-reload ...");
 
 browser.pageAction.onClicked.addListener(toggle);

@@ -53,7 +53,7 @@ Linux.)
 - Register the native part of the extension with:
 
   ```bash
-  ln -s native/triggered.reload.json ~/Library/Application\ Support/Mozilla/NativeMessagingHosts/triggered.reload.json
+  cp native/triggered.reload.json ~/Library/Application\ Support/Mozilla/NativeMessagingHosts/
   ```
 
 - open a new tab in Firefox and type `about:debugging` into the address bar

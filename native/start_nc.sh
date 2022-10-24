@@ -5,4 +5,4 @@
 #
 # NOTE: Incoming bytes must be a UTF-8 encoded JSON message preceded by 32 bits
 # holding the length of the JSON bytes in *native byte order*!!!
-exec nc -kl 43434
+exec nc -kl4 127.0.0.1 43434
